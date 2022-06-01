@@ -4,7 +4,7 @@ const fs=require('fs');
 const express=require('express');
 const path=require('path');
 const app = express();
-const staticpath=path.join(__dirname,"./project");
+const staticpath=path.join(__dirname,"./");
 app.use(express.static(staticpath));
 
 app.get("",(req,res)=>{
