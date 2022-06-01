@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>weather_condition</title>
+   <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <img src="./photos/p1.jpg" alt="background photo">
+    <div class="container">
+        <div class="bx box-1"></div>
+        <div class="bx box-2"></div>
+        <div class="bx box-3"></div>
+        <div id="sky">
+            <div id="atsky">image-icon</div>
+            <div class=" sky-data">
+                <p id="cond">{%condition%}</p>
+                <p id="air">Air speed-{%airspeed%}</p>
+                <p id="pressure">Pressure-{%pressure%}</p>
+            </div>
+        </div>
+
+        <div id="location"><i class="fas  fa-street-view"></i>
+            {%location%}
+        </div>
+        <div class="info">
+            <h2 id="temp"> {%temp%}&deg;C </h2><br>
+            <p id="mxtemp">maximum- {%maxtemp%}&deg;C</p>
+            <p id="mntemp">minimum- {%mintemp%}&deg;C</p>
+            <p id="date"> day, date </p>
+        </div>
+    </div>
+    <div class="input" id="input">
+        
+            <input type="text" id="city" placeholder="city" autocomplete="off" required><br>
+
+        
+       
+        <p class="check">
+            <button type="submit" style="background-color:skyblue" onclick="search()">Check</button>
+        </p>
+    </div>
+
+
+
+    <script src="indx.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* body{
+            
+            background-image: url("./photos/p1.jpg ");
+            object-fit: cover;
+        } */
+
+        .container {
+            top: 12vh;
+            left: 50%;
+            transform: translate(-50%);
+            position: relative;
+            width: 400px;
+            height: auto;
+            contain: content;
+            background-color: rgb(236, 216, 37);
+            border-radius: 8px;
+            box-shadow: 10px ;
+        }
+        img{
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+        }
+        #sky {
+            position: relative;
+            width: 100%;
+            height: 35vh;
+            display: flex;
+            background-color: aqua;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fa-solid {
+            display: block;
+            font-size: 8vh;
+            animation: weather_icon 2s infinite alternate;
+        }
+
+        @keyframes weather_icon {
+            from {
+                font-size: 8vh;
+            }
+
+            to {
+                font-size: 18vh;
+            }
+        }
+
+        #location {
+            position: relative;
+            display: flex;
+            background-color: greenyellow;
+            /* border-radius: 0 10% 0 0; */
+            height: 15vh;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+
+        }
+
+        .fa-street-view {
+            color: darkblue;
+            font-size: .75cm;
+            animation: street_view 2s infinite;
+        }
+
+        @keyframes street_view {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .info {
+            padding: 4vh;
+            position: relative;
+            background-color: greenyellow;
+            display: block;
+            height: auto;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .bx {
+          
+            top: 32vh;
+             right: -60%;
+            display: block;
+            position: absolute;
+            height: 800px;
+            width: 800px;
+            background-color: red;
+            z-index: 2;
+        }
+
+        .box-1 {
+            background-color: rgb(231, 224, 216);
+            border-radius: 30% 35% 40% 50%;
+            animation: wave 2s infinite linear;
+        }
+
+        .box-2 {
+            background-color: rgba(212, 210, 207, 0.829);
+            border-radius: 35% 40% 50% 30%;
+            animation: wave 2s infinite linear;
+        }
+
+        .box-3 {
+            background-color: rgba(209, 203, 190, 0.623);
+            border-radius: 40% 50% 30% 35%;
+            animation: wave 2s infinite linear;
+        }
+
+        @keyframes wave {
+            from {
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .input {
+            
+            display: flex;
+            background-color: rgb(166, 150, 235);
+            width: 400px;
+            /* max-width: 400px; */
+            height: 5vh;
+            position: absolute;
+            top: 7%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-radius: 10px;
+            font-size: larger;
+        }
+        
+        #city{
+            outline: none;
+            color: black;
+            font-weight: 800;
+            text-align: center;
+            width: 60%;
+            overflow-x: scroll;
+            padding-left: 1%;
+            padding-right:9% ;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(166, 150, 235);
+        }
+        button{
+            position: fixed;
+            width: 80px ;
+            height: 5vh;
+            right: 0;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .sky-data {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            z-index: 10;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 400px) {
+            .container {
+                width: 98vw;
+                min-height: auto;
+            }
+            .input{
+                width: 98vw;
+            }
+            button{
+              opacity: 80%;
+            }
+        }
